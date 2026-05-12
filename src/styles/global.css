@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sapir-bg: #030816;
+  --color-sapir-blue: #0A1C40;
+  --color-sapir-blue-light: #1A3673;
+  --color-charcoal: #121212;
+  --color-charcoal-light: #2A2A2A;
+  --color-safety-orange: #FF5A00;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+  
+  --color-surface-translucent: rgba(10, 28, 64, 0.4);
+  --color-surface-hover: rgba(26, 54, 115, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  --font-sans: "Geist", "Inter", -apple-system, system-ui, sans-serif;
+  --font-hebrew: "Heebo", "Assistant", "Rubik", sans-serif;
+}
+
+@utility glass-panel {
+  background: var(--color-surface-translucent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@utility neon-accent {
+  box-shadow: 0 0 15px var(--color-safety-orange), inset 0 0 10px var(--color-safety-orange);
+}
+
+@layer base {
+  body {
+    @apply bg-sapir-bg text-white antialiased font-hebrew overflow-x-hidden;
+    /* Custom spatial grid background */
+    background-image: 
+      linear-gradient(rgba(26, 54, 115, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 54, 115, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-attachment: fixed;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+body[dir="rtl"] {
+  direction: rtl;
+}
