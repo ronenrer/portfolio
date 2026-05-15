@@ -115,23 +115,19 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className="hidden md:flex items-center gap-8 relative z-20">
-        {['Systems', 'Work', 'Philosophy', 'Capabilities', 'Contact'].map((item, idx) => {
-          const id = item === 'Philosophy' ? 'approach' : item.toLowerCase();
+        {['Work', 'About', 'Contact'].map((item) => {
+          const id = item === 'About' ? 'approach' : item.toLowerCase();
           return (
             <a
               key={item}
               href={`#${id}`}
               onClick={(e) => handleScroll(e, id)}
-              className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted hover:text-primary transition-colors duration-300 group cursor-pointer"
+              className="text-sm text-muted hover:text-primary transition-colors duration-300 cursor-pointer"
             >
               {item}
             </a>
           );
         })}
-        {/* Status Indicator */}
-        <div className="ml-4 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 bg-[#39FF14] rounded-full shadow-[0_0_8px_#39FF14] animate-pulse"></div>
-        </div>
       </div>
 
       {/* Mobile Menu Button - simplified */}
@@ -411,22 +407,13 @@ const HeroSection = () => {
   const yFloat = useTransform(scrollY, [0, 1000], [0, -100]); // Antigravity float for the image
 
   return (
-    <section id="hero" className="min-h-[90vh] flex flex-col justify-center pt-10 pb-0 relative z-10 border-b border-arch">
+    <section id="hero" className="min-h-[85vh] flex flex-col justify-center pt-20 pb-0 relative z-10 border-b border-arch">
 
-      {/* Ambient Aura Glows for 2026 Trend Aesthetic */}
-      <div className="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-fuchsia-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-[0%] right-[10%] w-[500px] h-[500px] bg-[#39FF14]/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-      {/* Foreground Architectural Drift */}
-      <motion.div className="absolute right-0 top-0 w-full md:w-1/2 h-full z-40 hidden md:block">
-        <SystemArchitectureDrift />
-      </motion.div>
-
-      {/* Main Content Area - Split Minimalist */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 relative z-10 items-center pointer-events-none">
+      {/* Main Content Area */}
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 relative z-10 items-center">
 
         {/* Left: Text Content */}
-        <div className="lg:col-span-7 xl:col-span-7 pointer-events-auto">
+        <div className="lg:col-span-7 xl:col-span-7">
           <motion.div className="pr-0">
             <motion.div
               initial={{ opacity: 0 }}
@@ -453,7 +440,7 @@ const HeroSection = () => {
             >
               {/* Text Content */}
               <div className="relative z-30">
-                <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-bold tracking-tighter leading-[1.05] text-primary">
+                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1] text-primary">
                   {"I'm Ronen. I build products that work beautifully — and actually ship.".split(" ").map((word, i) => (
                     <motion.span 
                       key={i}
@@ -498,6 +485,22 @@ const HeroSection = () => {
               </a>
             </motion.div>
 
+          </motion.div>
+        </div>
+
+        {/* Right: Simple Photo */}
+        <div className="lg:col-span-5 xl:col-span-5 hidden lg:flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="w-full max-w-md aspect-square bg-surface-hover border border-arch overflow-hidden"
+          >
+            <img 
+              src={heroImage} 
+              alt="Ronen" 
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            />
           </motion.div>
         </div>
 
@@ -551,30 +554,29 @@ const EthosTelemetrySection = () => {
   );
 };
 
-const AICapabilitiesSection = () => {
+const SkillsSection = () => {
   const capabilities = [
-    { title: "Reliable Systems", desc: "Code that does what it's supposed to. Every time. No surprises at 3am.", num: "01" },
-    { title: "Automation", desc: "Turning repetitive manual work into things that just... happen.", num: "02" },
-    { title: "Data Quality", desc: "Garbage in, garbage out. I make sure the 'in' part is solid.", num: "03" }
+    { title: "Product Strategy", desc: "I figure out what to build before writing code. Sounds obvious, but most skip this.", num: "01" },
+    { title: "Full-Stack Development", desc: "React, Node, databases, deployment. The whole thing from idea to production.", num: "02" },
+    { title: "Design Systems", desc: "Consistent components, clear patterns. Makes future work faster, not slower.", num: "03" }
   ];
 
   return (
-    <section id="systems" className="py-32 relative z-10 border-b border-arch">
-      <div className="mb-20 grid grid-cols-4 md:grid-cols-12 gap-6 lg:gap-10">
-        <div className="col-span-4 md:col-span-12">
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#39FF14]/70 inline-block">How I Think</h2>
-        </div>
+    <section id="systems" className="py-24 relative z-10 border-b border-arch">
+      <div className="mb-16">
+        <span className="text-xs font-mono text-muted uppercase tracking-widest">What I do</span>
+        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-primary mt-2">Skills</h2>
       </div>
 
       <div className="grid grid-cols-1 border-t border-arch">
         {capabilities.map((cap, idx) => (
-          <ArchitectPanel key={idx} delay={idx * 0.1} className="py-12 border-b-0 border-x-0 border-arch grid grid-cols-4 md:grid-cols-12 gap-6 lg:gap-10 items-start group hover:-translate-y-0 hover:bg-surface-hover">
+          <ArchitectPanel key={idx} delay={idx * 0.1} className="py-10 border-b border-arch grid grid-cols-4 md:grid-cols-12 gap-6 lg:gap-10 items-start group hover:bg-surface-hover">
             <div className="col-span-1 font-mono text-xs text-muted">/{cap.num}</div>
             <div className="col-span-3 md:col-span-4">
-              <h3 className="text-xl md:text-2xl font-bold text-primary tracking-tight">{cap.title}</h3>
+              <h3 className="text-lg md:text-xl font-semibold text-primary tracking-tight">{cap.title}</h3>
             </div>
             <div className="col-span-4 md:col-span-7">
-              <p className="text-muted leading-relaxed font-medium md:text-lg">
+              <p className="text-muted leading-relaxed">
                 {cap.desc}
               </p>
             </div>
@@ -1025,17 +1027,16 @@ export default function App() {
       <main className="flex-1 w-full pt-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 xl:px-24">
           <HeroSection />
-          <EthosTelemetrySection />
-          <AICapabilitiesSection />
+          <SkillsSection />
           <WorkSection onProjectClick={setSelectedProject} />
           <ApproachSection />
           <CapabilitiesSection />
           <ContactSection />
 
-          {/* Footer Spacer */}
-          <div className="h-32 border-t border-arch flex items-center justify-between font-mono text-xs text-muted uppercase">
-            <span>© 2026 Technical Consultant</span>
-            <span>All Systems Operational</span>
+          {/* Footer */}
+          <div className="h-24 border-t border-arch flex items-center justify-between text-sm text-muted">
+            <span>© 2026 Ronen</span>
+            <span>Tel Aviv</span>
           </div>
         </div>
       </main>
