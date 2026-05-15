@@ -510,7 +510,7 @@ const HeroSection = () => {
 const EthosTelemetrySection = () => {
   return (
     <section className="w-full py-12 lg:py-16 border-b border-arch relative z-10">
-      <div className="w-full flex w-full flex-col lg:flex-row items-center lg:items-end justify-between gap-12 pointer-events-auto relative z-20">
+      <div className="w-full flex flex-col lg:flex-row items-center lg:items-end justify-between gap-12 pointer-events-auto relative z-20">
 
         {/* Left: Typing Quote */}
         <div className="max-w-[480px] px-4 py-3">

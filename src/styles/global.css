@@ -10,8 +10,13 @@
   --color-gold: #D4AF37;
   --color-gold-light: #F3E5AB;
   
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #141414;
+  --color-primary: #f5f5f5;
+  --color-muted: #888888;
+  --color-arch: rgba(255, 255, 255, 0.08);
+  
   --color-surface-translucent: rgba(10, 28, 64, 0.4);
-  --color-surface-hover: rgba(26, 54, 115, 0.6);
   --color-glass-border: rgba(255, 255, 255, 0.1);
 
   --font-sans: "Geist", "Inter", -apple-system, system-ui, sans-serif;
