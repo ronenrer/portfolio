@@ -488,18 +488,18 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Right: Simple Photo */}
+        {/* Right: Illustration */}
         <div className="lg:col-span-5 xl:col-span-5 hidden lg:flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full max-w-md aspect-square bg-surface-hover border border-arch overflow-hidden"
+            className="w-full max-w-md"
           >
             <img 
-              src={heroImage} 
-              alt="Ronen" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              src="/images/ronen-illustration.jpg" 
+              alt="Ronen illustration" 
+              className="w-full h-auto"
             />
           </motion.div>
         </div>
