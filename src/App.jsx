@@ -161,16 +161,16 @@ const SystemArchitectureDrift = () => {
   }, []);
 
   const nodesInfo = {
-    'client': { cx: 200, cy: 150, label: 'Client Interface', desc: 'React frontend delivering tactical state feedback.' },
-    'gateway': { cx: 350, cy: 250, label: 'API Gateway', desc: 'Load-balanced entry point managing deterministic request limits.' },
-    'engine': { cx: 650, cy: 120, label: 'Logic Engine', desc: 'Core pipeline orchestrating strict business and system bounds.' },
-    'db': { cx: 800, cy: 400, label: 'Vector Store', desc: 'High-dimensional data warehouse strictly optimized for instant retrieval.' },
-    'worker': { cx: 500, cy: 500, label: 'Async Workers', desc: 'Background processing nodes handling automated task ingestion.' },
-    'analytics': { cx: 250, cy: 650, label: 'Analytics Pipeline', desc: 'Real-time structural telemetry and behavioral aggregation.' },
-    'cache': { cx: 350, cy: 250, label: 'Edge Cache', desc: 'Low-latency rotational memory buffer for rapid state delivery.' },
-    'auth': { cx: 650, cy: 120, label: 'Auth Middleware', desc: 'Security layer dictating strict cryptographic boundaries.' },
-    'queue': { cx: 800, cy: 400, label: 'Message Queue', desc: 'Distributed event bus ensuring asynchronous reliability.' },
-    'storage': { cx: 500, cy: 500, label: 'Object Storage', desc: 'Immutable block storage for raw asset archiving.' }
+    'client': { cx: 200, cy: 150, label: 'What Users See', desc: 'The interface people actually interact with. Where first impressions happen.' },
+    'gateway': { cx: 350, cy: 250, label: 'Traffic Control', desc: 'The bouncer at the door. Decides what gets in and what waits.' },
+    'engine': { cx: 650, cy: 120, label: 'The Brain', desc: 'Where the actual thinking happens. Business rules live here.' },
+    'db': { cx: 800, cy: 400, label: 'Memory', desc: 'Everything we need to remember. Fast when it matters.' },
+    'worker': { cx: 500, cy: 500, label: 'Background Tasks', desc: 'The stuff that runs while you grab coffee. Emails, reports, syncs.' },
+    'analytics': { cx: 250, cy: 650, label: 'Insights', desc: 'Figuring out what actually happened and why it matters.' },
+    'cache': { cx: 350, cy: 250, label: 'Quick Access', desc: 'Keeping the popular stuff close. Nobody likes waiting.' },
+    'auth': { cx: 650, cy: 120, label: 'Security', desc: 'Making sure you are who you say you are. No shortcuts.' },
+    'queue': { cx: 800, cy: 400, label: 'Task Queue', desc: 'A polite line for things that need to happen, one at a time.' },
+    'storage': { cx: 500, cy: 500, label: 'File Storage', desc: 'Photos, documents, the heavy stuff. Safe and organized.' }
   };
 
   const autoFlowPath = ['client', 'gateway', 'engine', 'db', 'worker', 'analytics'];
@@ -435,7 +435,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-3 px-4 py-2 border border-arch bg-surface/80 backdrop-blur-md mb-8 uppercase"
             >
               <span className="w-2 h-2 bg-primary"></span>
-              <span className="text-[10px] font-bold text-primary tracking-widest">Advisory & Executive Practice</span>
+              <span className="text-[10px] font-bold text-primary tracking-widest">Available for new projects</span>
             </motion.div>
 
             <motion.div
@@ -484,7 +484,7 @@ const HeroSection = () => {
                 }}
                 className="group bg-primary text-surface px-8 py-4 transition-colors hover:bg-muted flex items-center gap-2"
               >
-                Initialize Systems <span className="group-hover:translate-x-1 transition-transform">→</span>
+                See how I think <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
               <a
                 href="#work"
@@ -494,7 +494,7 @@ const HeroSection = () => {
                 }}
                 className="text-primary bg-surface/80 backdrop-blur-md px-8 py-4 border border-arch transition-colors hover:bg-surface-hover hover:border-border"
               >
-                Index Catalog
+                Recent work
               </a>
             </motion.div>
 
