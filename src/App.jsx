@@ -395,9 +395,9 @@ const LiveThinkingWidget = () => {
         </span>
       </div>
       <div className="font-mono text-xs md:text-sm text-primary leading-relaxed flex flex-col gap-1">
-        <span className="text-muted uppercase tracking-widest text-[9px] font-bold">Current Focus:</span>
+        <span className="text-muted uppercase tracking-widest text-[9px] font-bold">What I'm working on:</span>
         <p className="font-medium tracking-tight mt-1">
-          Architecting state-driven AI agents that evaluate complex UI logic before generating code. Mastering high-performance motion architectures. <span className="animate-pulse">_</span>
+          Building AI tools that understand context before writing code. Also obsessing over animation performance. <span className="animate-pulse">_</span>
         </p>
       </div>
     </motion.div>
@@ -454,9 +454,9 @@ const HeroSection = () => {
               {/* Text Content */}
               <div className="relative z-30">
                 <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-bold tracking-tighter leading-[1.05] text-primary">
-                  {"I’m Ronen. I’ve spent the last few decades bridging the gap between high-end design and complex engineering.".split(" ").map((word, i) => (
+                  {"I'm Ronen. I build products that work beautifully — and actually ship.".split(" ").map((word, i) => (
                     <motion.span 
-                      key={i} 
+                      key={i}
                       className="inline-block"
                       variants={{
                         hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
@@ -515,7 +515,7 @@ const EthosTelemetrySection = () => {
         {/* Left: Typing Quote */}
         <div className="max-w-[480px] px-4 py-3">
           <p className="font-mono text-primary leading-relaxed text-base lg:text-lg uppercase tracking-wider">
-            {Array.from("\"I don't just build tools;").map((char, index) => (
+            {Array.from("Most projects fail because").map((char, index) => (
               <motion.span
                 key={`l1-${index}`}
                 initial={{ opacity: 0 }}
@@ -527,7 +527,7 @@ const EthosTelemetrySection = () => {
               </motion.span>
             ))}
             <br />
-            {Array.from("I solve the business logic behind them.\"").map((char, index) => (
+            {Array.from("someone skipped the hard questions.").map((char, index) => (
               <motion.span
                 key={`l2-${index}`}
                 initial={{ opacity: 0 }}
@@ -553,16 +553,16 @@ const EthosTelemetrySection = () => {
 
 const AICapabilitiesSection = () => {
   const capabilities = [
-    { title: "Deterministic Logic", desc: "Building absolutely reliable state-machines and architectural patterns.", num: "01" },
-    { title: "Flow Orchestration", desc: "Automating zero-touch pipelines converting raw inputs into structured outputs.", num: "02" },
-    { title: "System Integrity", desc: "Deeply context-aware validation frameworks ensuring absolute data fidelity.", num: "03" }
+    { title: "Reliable Systems", desc: "Code that does what it's supposed to. Every time. No surprises at 3am.", num: "01" },
+    { title: "Automation", desc: "Turning repetitive manual work into things that just... happen.", num: "02" },
+    { title: "Data Quality", desc: "Garbage in, garbage out. I make sure the 'in' part is solid.", num: "03" }
   ];
 
   return (
     <section id="systems" className="py-32 relative z-10 border-b border-arch">
       <div className="mb-20 grid grid-cols-4 md:grid-cols-12 gap-6 lg:gap-10">
         <div className="col-span-4 md:col-span-12">
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#39FF14]/70 inline-block">Systems Architecture</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#39FF14]/70 inline-block">How I Think</h2>
         </div>
       </div>
 
@@ -683,9 +683,9 @@ const BentoCard = ({ project, idx, onClick }) => {
             <div className={`absolute inset-0 flex items-end justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 p-8 pointer-events-none ${isViewTwo ? 'hidden' : ''}`}>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full" style={{ transform: "translateZ(60px)" }}>
                 {[
-                  { title: "Strategic Advisory", desc: "Converting complex restaurant data into actionable insights." },
-                  { title: "UI/UX Design", desc: "Pixel-perfect dashboard for Hebrew-speaking users." },
-                  { title: "AI Orchestration", desc: "Integrating a 'Personal Assistant' into daily workflows." }
+                  { title: "Strategy", desc: "Helped make sense of messy restaurant data." },
+                  { title: "Design", desc: "Clean dashboard built for Hebrew users." },
+                  { title: "AI Features", desc: "Built-in assistant that actually helps day-to-day." }
                 ].map((metric, i) => (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -771,17 +771,17 @@ const BentoCard = ({ project, idx, onClick }) => {
 
 const WorkSection = ({ onProjectClick }) => {
   const projects = [
-    { title: "Boosty (BoostAI)", id: "boosty", tag: "AI Orchestration & UI", type: "technical", span: "col-span-1 md:col-span-12" },
-    { title: "Regulus Core", id: "regulus", tag: "Development & Strategy", type: "technical", span: "col-span-1 md:col-span-6 row-span-1" },
-    { title: "Padel Tel Aviv", id: "padel", tag: "Interactive Design", type: "organic", span: "col-span-1 md:col-span-6 row-span-1" },
-    { title: "Alma Network", id: "alma", tag: "Community Platform", type: "organic", span: "col-span-1 md:col-span-5 row-span-1" },
-    { title: "Ethereal Builder", id: "ethereal", tag: "Design Systems", type: "technical", span: "col-span-1 md:col-span-7 row-span-1" }
+    { title: "Boosty (BoostAI)", id: "boosty", tag: "AI Product", type: "technical", span: "col-span-1 md:col-span-12" },
+    { title: "Regulus Core", id: "regulus", tag: "Full-Stack Dev", type: "technical", span: "col-span-1 md:col-span-6 row-span-1" },
+    { title: "Padel Tel Aviv", id: "padel", tag: "Web Design", type: "organic", span: "col-span-1 md:col-span-6 row-span-1" },
+    { title: "Alma Network", id: "alma", tag: "Community App", type: "organic", span: "col-span-1 md:col-span-5 row-span-1" },
+    { title: "Ethereal Builder", id: "ethereal", tag: "Design System", type: "technical", span: "col-span-1 md:col-span-7 row-span-1" }
   ];
 
   return (
     <section id="work" className="py-32 relative z-10 border-b border-arch overflow-hidden">
       <div className="mb-16 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
-        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-primary uppercase">Project Archive</h2>
+        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-primary uppercase">Recent Work</h2>
         <span className="font-mono text-xs text-muted uppercase tracking-widest">Selected Works / Bento</span>
       </div>
 
@@ -825,15 +825,15 @@ const ApproachSection = () => {
 
         <div className="space-y-16">
           <p className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium tracking-tight text-primary/95">
-            Code isn't just instruction; it's infrastructure. I believe in ruthless minimalism and absolute precision—writing clean, deterministic systems that scale predictably and never fail silently.
+            I write code like I'm going to maintain it at 2am after three coffees. Clear names. Obvious structure. No clever tricks that'll confuse future-me.
           </p>
 
           <p className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium tracking-tight text-primary/95">
-            True "AI-readiness" isn't about slapping an API onto a legacy codebase. It requires structured data, zero-touch pipelines, and an architecture fundamentally designed to be orchestrated by non-human agents.
+            Everyone wants "AI-ready" systems. Most just bolt an API onto spaghetti code and call it done. Real AI-readiness means clean data, clear pipelines, and architecture that makes sense to both humans and machines.
           </p>
 
           <p className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium tracking-tight text-primary/95">
-            And above all: aesthetic is function. A tool that looks like an afterthought is treated like one. Whether it's Boosty or Regulus, a premium interface demands respect, clarifies intent, and elevates the entire user experience.
+            Design isn't decoration. If something looks like an afterthought, people treat it like one. Good interfaces earn trust before users even click anything.
           </p>
         </div>
       </div>
@@ -940,17 +940,15 @@ const ProjectExpandedModal = ({ project, onClose }) => {
 
                 <div className="space-y-10 flex-1">
                   <div className="border-t border-arch pt-6">
-                    <h3 className="text-xs font-bold text-primary tracking-widest uppercase mb-4 opacity-70">Strategic Advisory</h3>
+                    <h3 className="text-xs font-bold text-primary tracking-widest uppercase mb-4 opacity-70">Planning</h3>
                     <p className="text-muted leading-relaxed font-medium md:text-lg">
-                      Comprehensive analysis and architectural blueprints focusing on modular scale.
-                      Ensuring absolute data fidelity and flow orchestration before a single line of code is committed.
+                      I map out the system before touching code. What data flows where? What breaks if X changes? Getting this right early saves weeks of refactoring later.
                     </p>
                   </div>
                   <div className="border-t border-arch pt-6">
-                    <h3 className="text-xs font-bold text-primary tracking-widest uppercase mb-4 opacity-70">Technical Execution</h3>
+                    <h3 className="text-xs font-bold text-primary tracking-widest uppercase mb-4 opacity-70">Building</h3>
                     <p className="text-muted leading-relaxed font-medium md:text-lg">
-                      Implemented utilizing rigorous grid systems and strict typographic scales.
-                      Animations are driven by physical spring models providing immediate, tactile feedback.
+                      Clean grids. Consistent spacing. Animations that feel natural, not decorative. Every detail matters when someone uses this thing daily.
                     </p>
                   </div>
                 </div>
