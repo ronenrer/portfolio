@@ -562,21 +562,21 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="systems" className="py-24 relative z-10 border-b border-arch">
+    <section id="systems" className="py-24 relative z-10 bg-white -mx-6 md:-mx-12 lg:-mx-20 xl:-mx-24 px-6 md:px-12 lg:px-20 xl:px-24">
       <div className="mb-16">
-        <span className="text-xs font-mono text-muted uppercase tracking-widest">What I do</span>
-        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-primary mt-2">Skills</h2>
+        <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">What I do</span>
+        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 mt-2">Skills</h2>
       </div>
 
-      <div className="grid grid-cols-1 border-t border-arch">
+      <div className="grid grid-cols-1 border-t border-neutral-200">
         {capabilities.map((cap, idx) => (
-          <ArchitectPanel key={idx} delay={idx * 0.1} className="py-10 border-b border-arch grid grid-cols-4 md:grid-cols-12 gap-6 lg:gap-10 items-start group hover:bg-surface-hover">
-            <div className="col-span-1 font-mono text-xs text-muted">/{cap.num}</div>
+          <ArchitectPanel key={idx} delay={idx * 0.1} className="py-10 border-b border-neutral-200 grid grid-cols-4 md:grid-cols-12 gap-6 lg:gap-10 items-start group hover:bg-neutral-50">
+            <div className="col-span-1 font-mono text-xs text-neutral-400">/{cap.num}</div>
             <div className="col-span-3 md:col-span-4">
-              <h3 className="text-lg md:text-xl font-semibold text-primary tracking-tight">{cap.title}</h3>
+              <h3 className="text-lg md:text-xl font-semibold text-neutral-900 tracking-tight">{cap.title}</h3>
             </div>
             <div className="col-span-4 md:col-span-7">
-              <p className="text-muted leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 {cap.desc}
               </p>
             </div>
